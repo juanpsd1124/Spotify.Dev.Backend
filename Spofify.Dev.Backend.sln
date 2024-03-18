@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spofify.Dev.Backend", "Spofify.Dev.Backend\Spofify.Dev.Backend.csproj", "{1EE0AC16-19E1-4DA3-8DB6-65CA20F338F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.Dev.Backend.Utils", "Spotify.Dev.Backend.Utils\Spotify.Dev.Backend.Utils.csproj", "{A62C36DE-A76C-4946-895E-BCC455E21739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.Dev.Backend.Dtos", "Spotify.Dev.Backend.Dtos\Spotify.Dev.Backend.Dtos.csproj", "{E9BFD91D-6278-4708-B181-EC1108C7AEE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.Dev.Backend.BL", "Spotify.Dev.Backend.BL\Spotify.Dev.Backend.BL.csproj", "{3985BFAB-477F-4131-83EA-B8EF3BAD47A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EE0AC16-19E1-4DA3-8DB6-65CA20F338F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE0AC16-19E1-4DA3-8DB6-65CA20F338F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE0AC16-19E1-4DA3-8DB6-65CA20F338F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE0AC16-19E1-4DA3-8DB6-65CA20F338F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A62C36DE-A76C-4946-895E-BCC455E21739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A62C36DE-A76C-4946-895E-BCC455E21739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A62C36DE-A76C-4946-895E-BCC455E21739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A62C36DE-A76C-4946-895E-BCC455E21739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9BFD91D-6278-4708-B181-EC1108C7AEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9BFD91D-6278-4708-B181-EC1108C7AEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9BFD91D-6278-4708-B181-EC1108C7AEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9BFD91D-6278-4708-B181-EC1108C7AEE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3985BFAB-477F-4131-83EA-B8EF3BAD47A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3985BFAB-477F-4131-83EA-B8EF3BAD47A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3985BFAB-477F-4131-83EA-B8EF3BAD47A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3985BFAB-477F-4131-83EA-B8EF3BAD47A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3848D12A-0463-4AC2-B325-B7148C9FED5F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spotify.Dev.Backend.Dtos\Spotify.Dev.Backend.Dtos.csproj" />
+    <ProjectReference Include="..\Spotify.Dev.Backend.Utils\Spotify.Dev.Backend.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
