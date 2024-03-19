@@ -129,6 +129,93 @@ namespace Spotify.Dev.Backend.BL
 
         }
 
+        /// <summary>
+        /// Method for search a artist on spotify using artist id
+        /// </summary>
+        /// <param name="id">Artist unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        public ArtistSearchResponseDto SearchArtist(string id, string token)
+        {
+            try
+            {
+                IList<HttpParamsDto> headersTest = new List<HttpParamsDto>() {
+                new HttpParamsDto() { Key = "Authorization", Value = $"Bearer {token}" }
+                };
+
+                Uri url = new Uri($"https://api.spotify.com/v1/artists/{id}");
+
+                IHttpClientManager<ArtistSearchResponseDto> httpManagerInstance = new HttpClientManager<object, ArtistSearchResponseDto>();
+
+                ArtistSearchResponseDto result = httpManagerInstance.Get(url, new JsonMediaTypeFormatter(), null, headersTest).GetAwaiter().GetResult();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+
+        }
+
+        /// <summary>
+        /// Method for search a album on spotify using album id
+        /// </summary>
+        /// <param name="id">Album unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        public AlbumSearchResponseDto SearchAlbum(string id, string token)
+        {
+            try
+            {
+                IList<HttpParamsDto> headersTest = new List<HttpParamsDto>() {
+                new HttpParamsDto() { Key = "Authorization", Value = $"Bearer {token}" }
+                };
+
+                Uri url = new Uri($"https://api.spotify.com/v1/albums/{id}");
+
+                IHttpClientManager<AlbumSearchResponseDto> httpManagerInstance = new HttpClientManager<object, AlbumSearchResponseDto>();
+
+                AlbumSearchResponseDto result = httpManagerInstance.Get(url, new JsonMediaTypeFormatter(), null, headersTest).GetAwaiter().GetResult();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+
+        }
+
+        /// <summary>
+        /// Method for search a track on spotify using track id
+        /// </summary>
+        /// <param name="id">Track unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        public TrackSearchResponseDto SearchTrack(string id, string token)
+        {
+            try
+            {
+                IList<HttpParamsDto> headersTest = new List<HttpParamsDto>() {
+                new HttpParamsDto() { Key = "Authorization", Value = $"Bearer {token}" }
+                };
+
+                Uri url = new Uri($"https://api.spotify.com/v1/tracks/{id}");
+
+                IHttpClientManager<TrackSearchResponseDto> httpManagerInstance = new HttpClientManager<object, TrackSearchResponseDto>();
+
+                TrackSearchResponseDto result = httpManagerInstance.Get(url, new JsonMediaTypeFormatter(), null, headersTest).GetAwaiter().GetResult();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+
+        }
+
         #endregion
 
     }

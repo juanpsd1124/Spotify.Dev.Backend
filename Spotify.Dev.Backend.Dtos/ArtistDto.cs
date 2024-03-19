@@ -24,29 +24,33 @@ namespace Spotify.Dev.Backend.Dtos
 
         #region Properties
 
-        public partial class Artists : ArtistDto
-        {
-            [JsonProperty("href")]
-            public Uri Href { get; set; }
+        [JsonProperty("href")]
+        public Uri Href { get; set; }
 
-            [JsonProperty("items")]
-            public ArtistsItem[] Items { get; set; }
+        [JsonProperty("items")]
+        public ArtistsItem[] Items { get; set; }
 
-            [JsonProperty("limit")]
-            public long Limit { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-            [JsonProperty("next")]
-            public Uri Next { get; set; }
+        [JsonProperty("type")]
+        public string type { get; set; }
 
-            [JsonProperty("offset")]
-            public long Offset { get; set; }
+        [JsonProperty("limit")]
+        public long Limit { get; set; }
 
-            [JsonProperty("previous")]
-            public object Previous { get; set; }
+        [JsonProperty("next")]
+        public Uri Next { get; set; }
 
-            [JsonProperty("total")]
-            public long Total { get; set; }
-        }
+        [JsonProperty("offset")]
+        public long Offset { get; set; }
+
+        [JsonProperty("previous")]
+        public object Previous { get; set; }
+
+        [JsonProperty("total")]
+        public long Total { get; set; }
+        
 
         public partial class ArtistsItem
         {
@@ -69,12 +73,9 @@ namespace Spotify.Dev.Backend.Dtos
             [JsonProperty("popularity")]
             public long Popularity { get; set; }
 
-
-
             [JsonProperty("uri")]
             public string Uri { get; set; }
         }
-
 
         #endregion
 

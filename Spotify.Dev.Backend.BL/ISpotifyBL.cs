@@ -27,5 +27,30 @@ namespace Spotify.Dev.Backend.BL
         /// <param name="token">Access web token.</param>
         /// <returns>SearchResponseDto</returns>
         SearchResponseDto SearchTerm(string term, string token);
+
+        /// <summary>
+        /// Method for search a track on spotify using track id
+        /// </summary>
+        /// <param name="id">Artist unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        ArtistSearchResponseDto SearchArtist(string id, string token);
+
+        /// <summary>
+        /// Method for search a track on spotify using track id
+        /// </summary>
+        /// <param name="id">Album unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        AlbumSearchResponseDto SearchAlbum(string id, string token);
+
+        /// <summary>
+        /// Method for search a track on spotify using track id
+        /// </summary>
+        /// <param name="id">Track unique id.</param>
+        /// <param name="token">Access web token.</param>
+        /// <returns>SearchResponseDto</returns>
+        TrackSearchResponseDto SearchTrack(string id, string token);
+
     }
 }

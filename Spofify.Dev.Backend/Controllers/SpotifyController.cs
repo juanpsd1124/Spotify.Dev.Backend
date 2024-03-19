@@ -67,33 +67,101 @@ namespace WebApi.Controllers
         [SwaggerResponse(statusCode: 200, type: typeof(LoginTokenResponseDto), description: "Method for request spotify auth token")]
         public IActionResult GetSpotifyLogin([FromQuery]string code)
         {
-            LoginTokenResponseDto result = this.SpotifyBL.RequestAccessToken(code);
-            return Redirect($"http://localhost:4200/home/search?resToken={result.Access_Token}");
+            try
+            {
+                LoginTokenResponseDto result = this.SpotifyBL.RequestAccessToken(code);
+                return Redirect($"http://localhost:4200/home/search?resToken={result.Access_Token}");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
         }
 
         /// <summary>
         /// "Method for request spotify auth token.
         /// </summary>
-        /// <param name="term">TSearch term entered by user.</param>
+        /// <param name="term">Search term entered by user.</param>
         /// <param name="token">Spotify user auth token.</param>
         /// <returns>SearchResponseDto</returns>
         [HttpGet("searchTerm")]
         [SwaggerResponse(statusCode: 200, type: typeof(SearchResponseDto), description: "Method for search term requested by user")]
         public IActionResult SearchTerm([FromQuery] string term, [FromQuery] string token) 
         {
-            SearchResponseDto result = this.SpotifyBL.SearchTerm(term, token);
-            return (Ok(result));
-
-
+            try
+            {
+                SearchResponseDto result = this.SpotifyBL.SearchTerm(term, token);
+                return (Ok(result));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
         }
 
+        /// <summary>
+        /// Method for search an artist on spotify using artist id
+        /// </summary>
+        /// <param name="id">Artist unique id.</param>
+        /// <param name="token">Spotify user auth token.</param>
+        /// <returns>SearchResponseDto</returns>
+        [HttpGet("searchArtist/{id}")]
+        [SwaggerResponse(statusCode: 200, type: typeof(ArtistSearchResponseDto), description: "Method for search term requested by user")]
+        public IActionResult SearchArtist(string id, [FromQuery] string token)
+        {
+            try
+            {
+                ArtistSearchResponseDto result = this.SpotifyBL.SearchArtist(id, token);
+                return (Ok(result));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+        }
+
+        /// <summary>
+        /// Method for search an ambum on spotify using album id
+        /// </summary>
+        /// <param name="id">Album unique id.</param>
+        /// <param name="token">Spotify user auth token.</param>
+        /// <returns>AlbumSearchResponseDto</returns>
+        [HttpGet("searchAlbum/{id}")]
+        [SwaggerResponse(statusCode: 200, type: typeof(AlbumSearchResponseDto), description: "Method for search term requested by user")]
+        public IActionResult SearchAlbum(string id, [FromQuery] string token)
+        {
+            try
+            {
+                AlbumSearchResponseDto result = this.SpotifyBL.SearchAlbum(id, token);
+                return (Ok(result));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+        }
+
+        /// <summary>
+        /// Method for search an track on spotify using track id
+        /// </summary>
+        /// <param name="id">Track unique id.</param>
+        /// <param name="token">Spotify user auth token.</param>
+        /// <returns>TrackSearchResponseDto</returns>
+        [HttpGet("searchTrack/{id}")]
+        [SwaggerResponse(statusCode: 200, type: typeof(TrackSearchResponseDto), description: "Method for search term requested by user")]
+        public IActionResult SearchTrack(string id, [FromQuery] string token)
+        {
+            try
+            {
+                TrackSearchResponseDto result = this.SpotifyBL.SearchTrack(id, token);
+                return (Ok(result));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+        }
 
         #endregion
-
-
-
-
-
-
     }
 }

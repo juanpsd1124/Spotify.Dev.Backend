@@ -9,7 +9,6 @@
 
 namespace Spotify.Dev.Backend.Dtos
 {
-    using static Spotify.Dev.Backend.Dtos.ArtistDto;
     public class SearchResponseDto
     {
 
@@ -27,8 +26,20 @@ namespace Spotify.Dev.Backend.Dtos
         /// Gets or sets artists
         /// </summary>
         /// <value>artists</value>
-        public Artists artists { get; set; }
-        
+        public ArtistDto artists { get; set; }
+
+        /// <summary>
+        /// Gets or sets artists
+        /// </summary>
+        /// <value>artists</value>
+        public AlbumDto albums { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether 
+        /// </summary>
+        /// <value></value>
+        public TrackDto tracks { get; set; }
+
         #endregion
 
         #region Methods And Functionss
